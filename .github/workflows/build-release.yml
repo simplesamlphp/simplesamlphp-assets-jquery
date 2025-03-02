@@ -1,5 +1,5 @@
 ---
-name: Build assets for SimpleSAMLphp 2.3
+name: Build assets for SimpleSAMLphp 2.4
 
 on:  # yamllint disable-line rule:truthy
   push:
