@@ -13,7 +13,7 @@ jobs:
       packages_changed: ${{ steps.changes.outputs.packages_changed }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           token: ${{ secrets.ASSETS_COMMIT_TOKEN }}
           ref: ${{ github.head_ref || github.ref_name }}
