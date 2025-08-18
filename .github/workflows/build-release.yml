@@ -15,7 +15,7 @@ jobs:
     if: ${{ github.event.commits[0].author.name != 'dependabot[bot]' }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           token: ${{ secrets.ASSETS_COMMIT_TOKEN }}
           ref: ${{ github.head_ref || github.ref_name }}
@@ -72,7 +72,7 @@ jobs:
         with:
           node-version: 18
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: release
 
@@ -139,7 +139,7 @@ jobs:
       version: ${{ steps.asset_version.outputs.version }}
 
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: build
 
@@ -174,7 +174,7 @@ jobs:
     runs-on: [ubuntu-latest]
 
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: build
 
