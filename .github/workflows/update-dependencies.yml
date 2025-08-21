@@ -1,5 +1,5 @@
 ---
-name: Update dependencies for SimpleSAMLphp 2.4
+name: Update dependencies for SimpleSAMLphp 2.5
 
 on: workflow_dispatch
 
@@ -25,7 +25,7 @@ jobs:
         run: git fetch --all
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install & build assets
         run: |
