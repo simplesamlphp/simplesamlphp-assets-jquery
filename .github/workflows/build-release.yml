@@ -36,14 +36,12 @@ jobs:
         with:
           node-version: 20
 
-      - uses: actions/download-artifact@v5
+      - uses: actions/checkout@v5
         with:
-          name: release
-
-      - name: unzip artifact for deployment
-        run: |
-          unzip release.zip
-          rm release.zip
+          token: ${{ secrets.ASSETS_COMMIT_TOKEN }}
+          ref: ${{ github.head_ref || github.ref_name }}
+          # Full git history is needed to get a proper list of changed files within `super-linter`
+          fetch-depth: 0
 
       - name: Install & build assets
         run: |
