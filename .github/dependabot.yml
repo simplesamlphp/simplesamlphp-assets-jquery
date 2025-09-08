@@ -16,15 +16,6 @@ updates:
         patterns: ["*"]
 
   - package-ecosystem: "github-actions"  # See documentation for possible values
-    target-branch: release-2.2
-    directory: "/"  # Location of package manifests
-    schedule:
-      interval: "weekly"
-    groups:
-      all-actions:
-        patterns: ["*"]
-
-  - package-ecosystem: "github-actions"  # See documentation for possible values
     target-branch: release-2.3
     directory: "/"  # Location of package manifests
     schedule:
@@ -42,14 +33,14 @@ updates:
       all-actions:
         patterns: ["*"]
 
-  - package-ecosystem: "composer"  # See documentation for possible values
-    target-branch: release-2.2
+  - package-ecosystem: "github-actions"  # See documentation for possible values
+    target-branch: release-2.5
     directory: "/"  # Location of package manifests
     schedule:
-      interval: "daily"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
+      interval: "weekly"
+    groups:
+      all-actions:
+        patterns: ["*"]
 
   - package-ecosystem: "composer"  # See documentation for possible values
     target-branch: release-2.3
@@ -62,6 +53,15 @@ updates:
 
   - package-ecosystem: "composer"  # See documentation for possible values
     target-branch: release-2.4
+    directory: "/"  # Location of package manifests
+    schedule:
+      interval: "daily"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: "composer"  # See documentation for possible values
+    target-branch: release-2.5
     directory: "/"  # Location of package manifests
     schedule:
       interval: "daily"
