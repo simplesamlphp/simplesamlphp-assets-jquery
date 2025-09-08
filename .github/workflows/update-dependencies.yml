@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: 'Run developer-tools update (2.3)'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           # Token has to be generated on a user account that controls the remote repository.
           # The _only_ scope to select is "Access public repositories", nothing more.
@@ -30,7 +30,7 @@ jobs:
             })
 
       - name: 'Run developer-tools update (2.4)'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           # Token has to be generated on a user account that controls the remote repository.
           # The _only_ scope to select is "Access public repositories", nothing more.
@@ -45,7 +45,7 @@ jobs:
             })
 
       - name: 'Run developer-tools update (2.5)'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           # Token has to be generated on a user account that controls the remote repository.
           # The _only_ scope to select is "Access public repositories", nothing more.
