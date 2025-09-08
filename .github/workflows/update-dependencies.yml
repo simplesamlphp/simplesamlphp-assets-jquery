@@ -23,7 +23,7 @@ jobs:
       - name: Fetch changes
         # Without fetching, we might miss new tags due to caching in Github Actions
         run: git fetch --all
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 20
 
