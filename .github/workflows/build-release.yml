@@ -110,7 +110,7 @@ jobs:
           unzip build.zip
           rm build.zip
 
-      - uses: paulhatch/semantic-version@v5.4.0
+      - uses: paulhatch/semantic-version@v6.0.0
         id: asset_version
         with:
           # The prefix to use to identify tags
