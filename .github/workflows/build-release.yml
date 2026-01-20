@@ -15,7 +15,7 @@ jobs:
     if: ${{ github.event.commits[0].author.name != 'dependabot[bot]' }}
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v5
         with:
           token: ${{ secrets.ASSETS_COMMIT_TOKEN }}
           ref: ${{ github.head_ref || github.ref_name }}
