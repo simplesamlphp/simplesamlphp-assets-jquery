@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
 
-    uses: simplesamlphp/simplesamlphp-test-framework/.github/workflows/reusable_linter.yml@v1.11.1
+    uses: simplesamlphp/simplesamlphp-test-framework/.github/workflows/reusable_linter.yml@v1.11.3
     with:
       enable_eslinter: true
       enable_jsonlinter: true
@@ -185,7 +185,7 @@ jobs:
       (needs.build.result == 'success' && needs.commit.result == 'skipped')
 
     steps:
-      - uses: geekyeggo/delete-artifact@v5
+      - uses: geekyeggo/delete-artifact@v6
         with:
           name: |
             release
