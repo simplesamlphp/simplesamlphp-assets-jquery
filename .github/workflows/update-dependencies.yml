@@ -56,7 +56,7 @@ jobs:
           echo "packages_changed=$HasPackageDiff" >> $env:GITHUB_OUTPUT
 
       - name: Add & Commit
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v10
         if: ${{ steps.changes.outputs.packages_changed }}
         with:
           # The arguments for the `git add` command (see the paragraph below for more info)
