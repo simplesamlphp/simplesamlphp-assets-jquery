@@ -148,7 +148,7 @@ jobs:
           unzip build.zip
           rm build.zip
 
-      - uses: paulhatch/semantic-version@v6.0.1
+      - uses: paulhatch/semantic-version@v6.0.2
         id: asset_version
         with:
           # The prefix to use to identify tags
@@ -184,7 +184,7 @@ jobs:
           rm build.zip
 
       - name: Add & Commit
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v10
         with:
           # The arguments for the `git add` command (see the paragraph below for more info)
           # Default: '.'
