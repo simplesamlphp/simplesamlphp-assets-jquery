@@ -58,3 +58,18 @@ jobs:
               workflow_id: 'build-release.yml',
               ref: 'release-2.6'
             })
+
+      - name: 'Run assets build (3.0)'
+        uses: actions/github-script@v9
+        with:
+          # Token has to be generated on a user account that controls the remote repository.
+          # The _only_ scope to select is "Access public repositories", nothing more.
+          github-token: "${{ secrets.PAT_TOKEN }}"
+          debug: true
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: 'simplesamlphp',
+              repo: 'simplesamlphp-assets-jquery',
+              workflow_id: 'build-release.yml',
+              ref: 'release-3.0'
+            })
