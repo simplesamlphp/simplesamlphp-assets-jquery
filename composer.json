@@ -10,9 +10,9 @@
         }
     ],
     "require": {
-        "php": "^8.3",
+        "php": "^8.5",
 
-        "simplesamlphp/composer-module-installer": "~1.7"
+        "simplesamlphp/composer-module-installer": "~2.0"
     },
     "archive": {
         "exclude": [

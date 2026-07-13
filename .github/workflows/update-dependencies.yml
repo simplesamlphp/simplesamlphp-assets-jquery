@@ -1,5 +1,5 @@
 ---
-name: Update dependencies for SimpleSAMLphp 2.6
+name: Update dependencies for SimpleSAMLphp 3.0
 
 on: workflow_dispatch
 
