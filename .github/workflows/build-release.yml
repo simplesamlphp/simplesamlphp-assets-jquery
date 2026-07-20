@@ -68,7 +68,7 @@ jobs:
       files_changed: ${{ steps.changes.outputs.files_changed }}
 
     steps:
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 20
 
@@ -148,7 +148,7 @@ jobs:
           unzip build.zip
           rm build.zip
 
-      - uses: paulhatch/semantic-version@v6.0.2
+      - uses: paulhatch/semantic-version@v6.0.3
         id: asset_version
         with:
           # The prefix to use to identify tags
